@@ -156,6 +156,9 @@ const lsp::DocumentSymbol *GDScriptWorkspace::get_native_symbol(const String &p_
 				}
 			}
 		}
+		if (class_name[0] == '@') {
+			break;
+		}
 		class_name = ClassDB::get_parent_class(class_name);
 	}
 
